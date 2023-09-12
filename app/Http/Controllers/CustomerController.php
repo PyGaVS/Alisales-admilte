@@ -13,7 +13,10 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+        $customers = Customer::class;
+        return view('customer.index', [
+            'customers'=> Customer::All()
+        ]);
     }
 
     /**
