@@ -383,6 +383,12 @@ return [
             'icon_color' => 'cyan',
             'url'        => '#',
         ],*/
+        [
+            'text'      => "Customers",
+            'icon'      => 'fas fa-user-friends fa-spin',
+            'icon_color'=> 'yellow',
+            'url'       => '/customer'
+        ],
     ],
 
     /*
