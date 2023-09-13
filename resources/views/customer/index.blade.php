@@ -9,10 +9,10 @@
 {{-- Setup data for datatables --}}
 @php
     $heads = [
-        'Name',
-        ['label' => 'Address'],
-        ['label' => 'Postal code'],
-        ['label' => 'Website', 'no-export' => true],
+        __('Name'),
+        ['label' => __('Address')],
+        ['label' => __('Postal code'), 'width' => 10],
+        ['label' => __('Website')],
         ['label' => 'Actions', 'width' => 12]
 
     ];
@@ -31,7 +31,7 @@
 
 
 @endphp
-
+@section('plugins.Datatables', true)
 @section('content')
     <div class="row">
         <div class="col-12">

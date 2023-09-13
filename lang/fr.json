@@ -1,5 +1,10 @@
 {
     "Dashboard" : "Tableau de bord",
     "You are logged in!" : "Tu es connecté!",
-    "Customers" : "Clients"
+    "Customers" : "Clients",
+
+    "Name" : "Nom",
+    "Address" : "Adresse mail",
+    "PostalCode" : "Adresse postale",
+    "Website" : "Site web"
 }
