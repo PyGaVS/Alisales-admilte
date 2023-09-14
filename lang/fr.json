@@ -1,4 +1,21 @@
 {
     "Dashboard" : "Tableau de bord",
-    "You are logged in!" : "Tu es connecté!"
+    "You are logged in!" : "Tu es connecté!",
+    "Customers" : "Clients",
+    "Add customer" : "Ajouter un client",
+
+    "Name" : "Nom",
+    "Mail" : "Adresse mail",
+    "Postalcode" : "Code postale",
+    "Website" : "Site web",
+    "Address" : "Adresse",
+    "Customer card" : "Fiche client",
+    "City" : "Ville",
+    "Update" : "Mettre à jour",
+    "Enter name" : "Entrer un nom",
+    "Enter address" : "Entrer une adresse",
+    "Enter postal code" : "Entrer un code postale",
+    "Enter city" : "Entrer une ville",
+    "Enter mail" : "Entrer une adresse mail",
+    "Enter url" : "Entrer un url"
 }

@@ -16,4 +16,8 @@ return [
     'important'                     => 'Important',
     'warning'                       => 'Avertissement',
     'information'                   => 'Informations',
+
+    //Menu
+
+    "Customers"                     => "Clients",
 ];
