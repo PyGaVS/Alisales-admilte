@@ -24,7 +24,17 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        //
+        $editables = [
+            ['Name', 'Enter name'],
+            ['Address', 'Enter address'],
+            ['Postalcode', 'Enter postal code'],
+            ['City', 'Enter city'],
+            ['Mail', 'Enter mail'],
+            ['Website', 'Enter url']
+        ];
+        return view('customer.create', [
+            'editables'=>$editables
+        ]);
     }
 
     /**
@@ -32,7 +42,15 @@ class CustomerController extends Controller
      */
     public function store(StoreCustomerRequest $request)
     {
-        //
+        $customer= Customer::create([
+            'name' => $request->name,
+            'address' => $request->address,
+            'postalCode' => $request->postalcode,
+            'city' => $request->city,
+            'email' => $request->mail,
+            'url' => $request->website
+        ]);
+        return redirect(route('customer.index'));
     }
 
     /**
@@ -69,7 +87,6 @@ class CustomerController extends Controller
      */
     public function update(UpdateCustomerRequest $request, Customer $customer)
     {
-        $customers = Customer::class;
         $customer->update([
             'name' => $request->name,
             'address' => $request->address,

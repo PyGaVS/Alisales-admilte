@@ -3,7 +3,15 @@
 @section('title', 'Alisales')
 
 @section('content_header')
+    <nobr><div style="
+    display:flex;
+    justify-content: space-between;
+    ">
     <h1 class="m-0 text-dark">{{__('Customers')}}</h1>
+    <a type="button" class="btn btn-primary" href="{{route('customer.create')}}">
+        <i style="margin-right: 10px;" class="fas fa-plus fa-lg"></i>{{__('Add customer')}}</a>
+    </div>
+    </nobr>
 @stop
 
 {{-- Setup data for datatables --}}
@@ -14,7 +22,6 @@
         ['label' => __('Postal code'), 'width' => 10],
         ['label' => __('Website')],
         ['label' => 'Actions', 'width' => 12]
-
     ];
 
     $config["lengthMenu"] = [ 10, 50, 100, 420, 500];
