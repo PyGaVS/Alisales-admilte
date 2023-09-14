@@ -395,6 +395,12 @@ return [
             'icon_color'=> 'yellow',
             'url'       => '/customer'
         ],
+        [
+            'text'      => 'Categories',
+            'icon'      => 'fas fa-list fa-lg',
+            'icon_color'=> 'yellow',
+            'url'       => '/category'
+        ]
     ],
 
     /*

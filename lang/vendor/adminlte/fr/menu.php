@@ -20,4 +20,5 @@ return [
     //Menu
 
     "Customers"                     => "Clients",
+    "Categories"                    => "Catégories"
 ];

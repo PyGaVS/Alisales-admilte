@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +28,6 @@ Route::get('/home', function() {
     return view('home');
 })->name('home')->middleware('auth');
 
-Route::resource('customer',\App\Http\Controllers\CustomerController::class);
+Route::resource('customer',Controllers\CustomerController::class);
+
+Route::resource('category', Controllers\CategoryController::class);

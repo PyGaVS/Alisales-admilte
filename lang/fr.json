@@ -10,6 +10,7 @@
     "Website" : "Site web",
     "Address" : "Adresse",
     "Customer card" : "Fiche client",
+    "Category card" : "Fiche catégorie",
     "City" : "Ville",
     "Update" : "Mettre à jour",
     "Enter name" : "Entrer un nom",
@@ -17,5 +18,7 @@
     "Enter postal code" : "Entrer un code postale",
     "Enter city" : "Entrer une ville",
     "Enter mail" : "Entrer une adresse mail",
-    "Enter url" : "Entrer un url"
+    "Enter url" : "Entrer un url",
+    "Categories" : "Catégories",
+    "Category" : "Catégorie"
 }

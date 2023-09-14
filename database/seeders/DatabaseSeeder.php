@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use \App\Models\User;
 use \App\Models\Customer;
+use \App\Models\Category;
 use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
@@ -26,6 +27,7 @@ class DatabaseSeeder extends Seeder
                 'password'=>Hash::make('12345678')
             ]);
         }
+        Category::factory(5)->create();
         /*
         User::factory(10)->create();
         User::factory()->create([
