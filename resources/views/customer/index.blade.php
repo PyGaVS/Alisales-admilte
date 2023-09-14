@@ -3,7 +3,7 @@
 @section('title', 'Alisales')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">{{__('Dashboard')}}</h1>
+    <h1 class="m-0 text-dark">{{__('Customers')}}</h1>
 @stop
 
 {{-- Setup data for datatables --}}
@@ -17,18 +17,7 @@
 
     ];
 
-    $config["lengthMenu"] = [ 10, 50, 100, 500];
-
-    $btnEdit = '<button class="btn btn-xs btn-default text-primary mx-1 shadow" title="Edit">
-                    <i class="fa fa-lg fa-fw fa-pen"></i>
-                </button>';
-    $btnDelete = '<button class="btn btn-xs btn-default text-danger mx-1 shadow" title="Delete">
-                      <i class="fa fa-lg fa-fw fa-trash"></i>
-                  </button>';
-    $btnDetails = '<button class="btn btn-xs btn-default text-teal mx-1 shadow" title="Details">
-                       <i class="fa fa-lg fa-fw fa-eye"></i>
-                   </button>';
-
+    $config["lengthMenu"] = [ 10, 50, 100, 420, 500];
 
 @endphp
 @section('plugins.Datatables', true)
@@ -46,7 +35,23 @@
                                 <td>{{$customer['address']}}</td>
                                 <td>{{$customer['postalCode']}}</td>
                                 <td>{{$customer['url']}}</td>
-                                <td>{!! $btnEdit.$btnDelete.$btnDetails !!}</td>
+                                <td><nobr>
+                                        <!-- EDIT -->
+                                        <a class="btn btn-xs btn-default text-primary mx-1 shadow" href="{{route('customer.edit', $customer['id'])}}">
+                                            <i class="fa fa-lg fa-fw fa-pen"></i>
+                                        </a>
+
+                                        <!-- DELETE -->
+                                        <a class="btn btn-xs btn-default text-danger mx-1 shadow" href="{{route('customer.destroy', $customer['id'])}}">
+                                            <i class="fa fa-lg fa-fw fa-trash"></i>
+                                        </a>
+
+                                        <!-- SHOW -->
+                                        <a class="btn btn-xs btn-default text-teal mx-1 shadow" href="{{route('customer.show', $customer['id'])}}">
+                                            <i class="fa fa-lg fa-fw fa-eye"></i>
+                                        </a>
+                                    </nobr>
+                                </td>
                             </tr>
                             @endforeach
 

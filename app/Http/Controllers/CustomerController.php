@@ -40,7 +40,9 @@ class CustomerController extends Controller
      */
     public function show(Customer $customer)
     {
-        //
+        return view('customer.show', [
+            'customer'=>$customer
+            ]);
     }
 
     /**
@@ -48,7 +50,18 @@ class CustomerController extends Controller
      */
     public function edit(Customer $customer)
     {
-        //
+        $editables = [
+            ['Name', 'Enter name', $customer->name],
+            ['Address', 'Enter address', $customer->address],
+            ['Postalcode', 'Enter postal code', $customer->postalCode],
+            ['City', 'Enter city', $customer->city],
+            ['Mail', 'Enter mail', $customer->email],
+            ['Website', 'Enter url', $customer->url]
+        ];
+        return view('customer.edit', [
+            'customer'=>$customer,
+            'editables'=>$editables
+            ]);
     }
 
     /**
@@ -56,7 +69,16 @@ class CustomerController extends Controller
      */
     public function update(UpdateCustomerRequest $request, Customer $customer)
     {
-        //
+        $customers = Customer::class;
+        $customer->update([
+            'name' => $request->name,
+            'address' => $request->address,
+            'postalCode' => $request->postalcode,
+            'city' => $request->city,
+            'email' => $request->mail,
+            'url' => $request->website
+        ]);
+        return redirect(route('customer.index'));
     }
 
     /**
