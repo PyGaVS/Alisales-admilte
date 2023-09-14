@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
 use App\Models\Customer;
@@ -10,12 +11,13 @@ class CustomerController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $customers = Customer::class;
+        $customers = Auth::user()->customers;
         return view('customer.index', [
-            'customers'=> Customer::All()
+            'customers'=> $customers
         ]);
     }
 
