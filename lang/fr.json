@@ -4,6 +4,7 @@
     "Customers" : "Clients",
     "Customer" : "Client",
     "Add customer" : "Ajouter un client",
+    "Add order" : "Ajouter une commande",
 
     "Name" : "Nom",
     "Mail" : "Adresse mail",
@@ -26,5 +27,7 @@
     "Amount" : "Montant",
     "VTA" : "TVA",
     "Order" : "Commande",
-    "Orders"  : "Commandes"
+    "Orders"  : "Commandes",
+    "Reference" : "Référence",
+    "VTA amount" : "Montant TVA"
 }

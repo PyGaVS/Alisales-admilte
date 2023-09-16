@@ -28,9 +28,16 @@ class OrderController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create($customer_id)
     {
-        //
+        $editables = [
+            ['Amount', 'Enter amount'],
+            ['VTAamount', '20%']
+        ];
+        return view('order.create', [
+            'editables'=>$editables,
+            'customer_id' => $customer_id
+        ]);
     }
 
     /**
@@ -38,7 +45,17 @@ class OrderController extends Controller
      */
     public function store(StoreOrderRequest $request)
     {
-        //
+        if($request->vtaamount===null){
+            $request->vtaamount = $request->amount*0.2;
+        }
+        $order = Order::create([
+            'amountET' => $request->amount,
+            'amountVTA' => $request->vtaamount,
+            'reference' => 'FR'.rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9).rand(0, 9),
+            'creationDate' => now(),
+            'customer_id' => $request->customer_id,
+        ]);
+        return redirect(route('customer.show', $request->customer_id));
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
@@ -11,7 +12,7 @@ class CustomerController extends Controller
 {
     /**
      * Display a listing of the resource.
-     * @return \Illuminate\Http\Response
+     *
      */
     public function index()
     {
@@ -44,7 +45,7 @@ class CustomerController extends Controller
      */
     public function store(StoreCustomerRequest $request)
     {
-        $customer= Customer::create([
+        Customer::create([
             'name' => $request->name,
             'address' => $request->address,
             'postalCode' => $request->postalcode,
@@ -60,8 +61,22 @@ class CustomerController extends Controller
      */
     public function show(Customer $customer)
     {
+        $heads = [
+            __('Reference'),
+            __('Date'),
+            'Total',
+            ['label' => 'Actions', 'width' => 15]
+        ];
+
+        $config["lengthMenu"] = [ 10, 50, 100, 420, 500];
+
+        $orders = $customer->orders;
+
         return view('customer.show', [
-            'customer'=>$customer
+            'customer'  => $customer,
+            'heads'     => $heads,
+            'config'    => $config,
+            'orders'    => $orders
             ]);
     }
 

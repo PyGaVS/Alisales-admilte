@@ -11,7 +11,7 @@
 {{-- Setup data for datatables --}}
 @php
     $heads = [
-        __('Name'),
+        __('Reference'),
         __('Date'),
         __('Customer'),
         'Total',
@@ -29,7 +29,8 @@
                 <div class="card-body">
                     {{-- fill data using the component slot --}}
                     <x-adminlte-datatable id="table1" :heads="$heads" head-theme="dark" theme="light" :config="$config"
-                                  striped hoverable beautify>
+                                  striped hoverable with-footer footer-theme="dark" beautify>
+
                             @foreach($orders as $order)
                             <tr>
                                 <td>{{$order['reference']}}</td>

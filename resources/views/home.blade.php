@@ -14,7 +14,7 @@
                     <p class="mb-0">{{__('You are logged in!')}}</p>
                 </div>
             </div>
-            <img class="img" src="img/image.jpg" alt="bruh" width=500px />
+            <!--<img class="img" src="img/image.jpg" alt="b" width=1000px />-->
         </div>
     </div>
 @stop

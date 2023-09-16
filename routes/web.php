@@ -33,3 +33,7 @@ Route::resource('customer',Controllers\CustomerController::class);
 Route::resource('category', Controllers\CategoryController::class);
 
 Route::resource('order', Controllers\OrderController::class);
+
+Route::get('/customer/{customer}/createOrder', [Controllers\OrderController::class, 'create'])->name('customer-order.create');
+Route::post('/customer/{customer}/storeOrder', [Controllers\OrderController::class, 'store'])->name('customer-order.store');
+

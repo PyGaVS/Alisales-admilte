@@ -19,7 +19,7 @@
     $heads = [
         __('Name'),
         ['label' => __('Address')],
-        ['label' => __('Postal code'), 'width' => 10],
+        ['label' => __('Postal code'), 'width' => 11],
         ['label' => __('Website')],
         ['label' => 'Actions', 'width' => 12]
     ];
@@ -61,7 +61,6 @@
                                 </td>
                             </tr>
                             @endforeach
-
                     </x-adminlte-datatable>
                 </div>
             </div>
