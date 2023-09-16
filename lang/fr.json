@@ -2,11 +2,13 @@
     "Dashboard" : "Tableau de bord",
     "You are logged in!" : "Tu es connecté!",
     "Customers" : "Clients",
+    "Customer" : "Client",
     "Add customer" : "Ajouter un client",
 
     "Name" : "Nom",
     "Mail" : "Adresse mail",
     "Postalcode" : "Code postale",
+    "Postal code" : "Code postale",
     "Website" : "Site web",
     "Address" : "Adresse",
     "Customer card" : "Fiche client",
@@ -20,5 +22,9 @@
     "Enter mail" : "Entrer une adresse mail",
     "Enter url" : "Entrer un url",
     "Categories" : "Catégories",
-    "Category" : "Catégorie"
+    "Category" : "Catégorie",
+    "Amount" : "Montant",
+    "VTA" : "TVA",
+    "Order" : "Commande",
+    "Orders"  : "Commandes"
 }

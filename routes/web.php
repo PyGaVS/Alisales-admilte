@@ -31,3 +31,5 @@ Route::get('/home', function() {
 Route::resource('customer',Controllers\CustomerController::class);
 
 Route::resource('category', Controllers\CategoryController::class);
+
+Route::resource('order', Controllers\OrderController::class);

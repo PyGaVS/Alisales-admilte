@@ -1,0 +1,84 @@
+[33mcommit 67f890038ff2e2b44764e431cda84e9f56757c88[m[33m ([m[1;36mHEAD -> [m[1;32mf3[m[33m)[m
+Author: Lylian BALL <BALL27LY@lycee-ndduroc.com>
+Date:   Thu Sep 14 17:11:25 2023 +0200
+
+    BREAD : BR of categories
+
+[33mcommit 17cd197a6e953b642e2212c1b33b2c1338f3680a[m
+Author: Lylian BALL <BALL27LY@lycee-ndduroc.com>
+Date:   Thu Sep 14 17:11:17 2023 +0200
+
+    BREAD : BR of categories
+
+[33mcommit 4a96dbee31c84861763fce43a2099a4804f29a5d[m[33m ([m[1;32mmaster[m[33m)[m
+Merge: d3132f8 bfaae5b
+Author: Lylian BALL <BALL27LY@lycee-ndduroc.com>
+Date:   Thu Sep 14 15:38:22 2023 +0200
+
+    Merge branch 'f2'
+
+[33mcommit bfaae5b0dbd4c662418b8df1cb989f4940549584[m
+Author: Lylian BALL <BALL27LY@lycee-ndduroc.com>
+Date:   Thu Sep 14 15:30:39 2023 +0200
+
+    BREAD : Browse - View only the user's customers
+
+[33mcommit 87eecc573388d91e1d7a24471d480089dfb451ce[m
+Author: Lylian BALL <BALL27LY@lycee-ndduroc.com>
+Date:   Thu Sep 14 11:56:16 2023 +0200
+
+    BREAD : add a new customer
+
+[33mcommit 54091995f3c8a1ebfd865792d6f007a5a8d32765[m
+Author: Lylian BALL <BALL27LY@lycee-ndduroc.com>
+Date:   Thu Sep 14 11:09:46 2023 +0200
+
+    BREAD : read and edit one customer
+
+[33mcommit f46a1ace4d2853a0498661d5e49d02eb202f189f[m
+Author: Lylian BALL <BALL27LY@lycee-ndduroc.com>
+Date:   Thu Sep 14 11:09:31 2023 +0200
+
+    BREAD : read and edit one customer
+
+[33mcommit aa7bcc2799a0a7a56b21191fee56b29f3cd86949[m
+Author: Lylian BALL <BALL27LY@lycee-ndduroc.com>
+Date:   Wed Sep 13 14:34:06 2023 +0200
+
+    BREAD F2 - Browse all the customers
+
+[33mcommit e862de6095333850a8a0463e26cfbc1b48df1429[m
+Author: Lylian BALL <BALL27LY@lycee-ndduroc.com>
+Date:   Tue Sep 12 22:54:48 2023 +0200
+
+    BREAD F2 - Browse all the customers
+
+[33mcommit f2cc17e323ad10b452e211a46e5e611324a77998[m
+Author: Lylian BALL <BALL27LY@lycee-ndduroc.com>
+Date:   Tue Sep 12 17:32:52 2023 +0200
+
+    no views
+
+[33mcommit d3132f8036e06e17858710e91425433b3c7b7ad2[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Lylian BALL <BALL27LY@lycee-ndduroc.com>
+Date:   Tue Sep 12 14:24:34 2023 +0200
+
+    commit
+
+[33mcommit c78aa148e689a25054869eb26f49cf6571beb38b[m
+Author: Lylian BALL <BALL27LY@lycee-ndduroc.com>
+Date:   Mon Sep 11 17:22:41 2023 +0200
+
+    random
+
+[33mcommit 5f6fc9bf6ec5b0a9780ba25c945e46201aa6b960[m
+Author: Lylian BALL <BALL27LY@lycee-ndduroc.com>
+Date:   Mon Sep 11 17:08:09 2023 +0200
+
+    SP1
+
+[33mcommit 8336772f2f17a4795b8eef08922c52017d588ea6[m
+Author: Lylian BALL <BALL27LY@lycee-ndduroc.com>
+Date:   Mon Sep 11 15:26:20 2023 +0200
+
+    initial commit

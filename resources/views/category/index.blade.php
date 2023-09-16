@@ -26,11 +26,11 @@
                 <div class="card-body">
                     {{-- fill data using the component slot --}}
                     <x-adminlte-datatable id="table1" :heads="$heads" head-theme="dark" theme="warning" :config="$config"
-                                  striped hoverable beautify>
+                                  hoverable beautify>
                             @foreach($categories as $category)
                             <tr>
-                                <td>{{$category['name']}}</td>
-                                <td><nobr>
+                                <td style="border: none;">{{$category['name']}}</td>
+                                <td style="border: none;"><nobr>
                                         <!-- SHOW -->
                                         <a class="btn btn-xs btn-default text-teal mx-1 shadow" href="{{route('category.show', $category['id'])}}">
                                             <i class="fa fa-lg fa-fw fa-eye"></i>

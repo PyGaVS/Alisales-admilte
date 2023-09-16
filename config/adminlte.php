@@ -400,6 +400,12 @@ return [
             'icon'      => 'fas fa-list fa-lg',
             'icon_color'=> 'yellow',
             'url'       => '/category'
+        ],
+        [
+            'text'      => 'Orders',
+            'icon'      => 'fas fa-store fa-lg',
+            'icon_color'=> 'yellow',
+            'url'       => '/order'
         ]
     ],
 

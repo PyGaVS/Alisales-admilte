@@ -20,5 +20,6 @@ return [
     //Menu
 
     "Customers"                     => "Clients",
-    "Categories"                    => "Catégories"
+    "Categories"                    => "Catégories",
+    "Orders"                        => "Commandes"
 ];
