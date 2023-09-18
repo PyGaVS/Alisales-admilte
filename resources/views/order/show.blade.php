@@ -20,13 +20,13 @@
                                     <b>{{__('Date')}}</b> <p class="float-right">{{$order->creationDate}}</p>
                                 </li>
                                 <li class="list-group-item">
-                                    <b>{{__('Amount')}}</b> <p class="float-right">{{$order->amountET}}€</p>
+                                    <b>{{__('Amount')}}</b> <p class="float-right">{{number_format($order->amountET, 2, ',', ' ')}}€</p>
                                 </li>
                                 <li class="list-group-item">
-                                    <b>{{__('VTA')}}</b> <p class="float-right">{{$order->amountVTA}}€</p>
+                                    <b>{{__('VTA')}}</b> <p class="float-right">{{number_format($order->amountVTA, 2, ',', ' ')}}€</p>
                                 </li>
                                 <li class="list-group-item">
-                                    <b>{{__('Total')}}</b> <p class="float-right">{{$order->amountVTA + $order->amountET}}€</p>
+                                    <b>{{__('Total')}}</b> <p class="float-right">{{number_format($order['amountET'] + $order['amountVTA'], 2, ',', ' ')}}€</p>
                                 </li>
                             </ul>
                             <!--<a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>-->

@@ -63,7 +63,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        $order['creationDate'] = Carbon::createFromFormat('Y-m-d', $order['creationDate'])->format('d/m/Y');
+        $order['creationDate'] = Carbon::createFromFormat('Y-m-d', $order['creationDate'])->format('D d/m/Y');
         return view('order.show', [
             'order'=>$order
         ]);
