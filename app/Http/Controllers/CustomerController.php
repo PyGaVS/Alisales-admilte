@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
@@ -71,6 +72,11 @@ class CustomerController extends Controller
         $config["lengthMenu"] = [ 10, 50, 100, 420, 500];
 
         $orders = $customer->orders;
+
+        foreach($orders as $order){
+            //$order['customer'] = Customer::find($order['customer_id'])->name;
+            $order['creationDate'] = Carbon::createFromFormat('Y-m-d', $order['creationDate'])->format('d/m/Y');
+        }
 
         return view('customer.show', [
             'customer'  => $customer,
