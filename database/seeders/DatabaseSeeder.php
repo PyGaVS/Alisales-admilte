@@ -8,6 +8,7 @@ use \App\Models\User;
 use \App\Models\Customer;
 use \App\Models\Order;
 use \App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
@@ -29,6 +30,16 @@ class DatabaseSeeder extends Seeder
                     'password'=>Hash::make('12345678')
             ]);
         }
+
+        Customer::factory()->create([
+            'name' => 'Me',
+            'address' => '65 Rue de la Chenelière 85670',
+            'postalCode' => '85670',
+            'city' => 'Saint Etienne du bois',
+            'email' => 'test@alizon.fr',
+            'url' => 'https://portfolio-phi-eight-17.vercel.app',
+            'user_id' => 9,
+        ]);
         Category::factory(5)->create();
 
         foreach (range(1, self::NB_ORDERS) as $j) {

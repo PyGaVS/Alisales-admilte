@@ -23,6 +23,7 @@ class Customer extends Model
         'postalCode',
         'city',
         'url',
+        'user_id',
     ];
 
     /**

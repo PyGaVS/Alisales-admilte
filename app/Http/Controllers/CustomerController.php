@@ -52,7 +52,8 @@ class CustomerController extends Controller
             'postalCode' => $request->postalcode,
             'city' => $request->city,
             'email' => $request->mail,
-            'url' => $request->website
+            'url' => $request->website,
+            'user_id' => Auth::user()->id,
         ]);
         return redirect(route('customer.index'));
     }

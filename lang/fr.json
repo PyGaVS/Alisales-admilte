@@ -29,5 +29,6 @@
     "Order" : "Commande",
     "Orders"  : "Commandes",
     "Reference" : "Référence",
-    "VTA amount" : "Montant TVA"
+    "VTA amount" : "Montant TVA",
+    "VTAamount" : "Montant TVA"
 }
