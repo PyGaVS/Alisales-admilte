@@ -12,11 +12,7 @@
                     <div class="card card-primary card-outline">
                         <x-forms.form method="put" action="{{route('customer.update', $customer->id)}}">
                             @foreach($editables as $editable)
-                                <div class="form-group">
-                                    <label for="{{strtolower($editable[0])}}">{{__($editable[0])}}</label>
-                                    <input type="text" class="form-control" id="{{strtolower($editable[0])}}" placeholder="{{__($editable[1])}}"
-                                           name="{{strtolower($editable[0])}}" value="{{$editable[2]}}">
-                                </div>
+                                <x-forms.input name="{{$editable[0]}}" type="{{$editable[3]}}" placeholder="{{$editable[1]}}" value="{{$editable[2]}}"/>
                             @endforeach
                         </x-forms.form>
                     </div>

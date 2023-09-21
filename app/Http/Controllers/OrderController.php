@@ -31,8 +31,8 @@ class OrderController extends Controller
     public function create($customer_id)
     {
         $editables = [
-            ['Amount', 'Enter amount'],
-            ['VTAamount', '20%']
+            ['Amount', 'Enter amount', 'number'],
+            ['VTAamount', '20%', 'number']
         ];
         return view('order.create', [
             'editables'=>$editables,

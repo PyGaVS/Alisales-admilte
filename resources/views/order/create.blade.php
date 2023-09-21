@@ -12,16 +12,9 @@
                     <div class="card card-primary card-outline">
                         <x-forms.form method="post" action="{{route('order.store')}}">
                             @foreach($editables as $editable)
-                                <div class="form-group">
-                                    <label for="{{strtolower($editable[0])}}">{{__($editable[0])}}</label>
-                                    <input type="number" step="0.01" class="form-control" id="{{strtolower($editable[0])}}" placeholder="{{$editable[1]}}"
-                                           name="{{strtolower($editable[0])}}">
-                                </div>
+                                <x-forms.input name="{{$editable[0]}}" type="{{$editable[2]}}" placeholder="{{$editable[1]}}" step="0.1"/>
                             @endforeach
-
-                                <div class="form-group">
-                                    <input type="hidden" class="form-control" name="customer_id" value="{{$customer_id}}">
-                                </div>
+                                <x-forms.inputHidden name="customer_id" value="{{$customer_id}}" />
                         </x-forms.form>
 
                     </div>

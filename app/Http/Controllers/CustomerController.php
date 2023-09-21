@@ -29,12 +29,12 @@ class CustomerController extends Controller
     public function create()
     {
         $editables = [
-            ['Name', 'Enter name'],
-            ['Address', 'Enter address'],
-            ['Postalcode', 'Enter postal code'],
-            ['City', 'Enter city'],
-            ['Mail', 'Enter mail'],
-            ['Website', 'Enter url']
+            ['Name', 'Enter name', 'text'],
+            ['Address', 'Enter address', 'text'],
+            ['Postalcode', 'Enter postal code', 'text'],
+            ['City', 'Enter city', 'text'],
+            ['Mail', 'Enter mail', 'email'],
+            ['Website', 'Enter url', 'url']
         ];
         return view('customer.create', [
             'editables'=>$editables
@@ -93,12 +93,12 @@ class CustomerController extends Controller
     public function edit(Customer $customer)
     {
         $editables = [
-            ['Name', 'Enter name', $customer->name],
-            ['Address', 'Enter address', $customer->address],
-            ['Postalcode', 'Enter postal code', $customer->postalCode],
-            ['City', 'Enter city', $customer->city],
-            ['Mail', 'Enter mail', $customer->email],
-            ['Website', 'Enter url', $customer->url]
+            ['Name', 'Enter name', $customer->name, 'text'],
+            ['Address', 'Enter address', $customer->address, 'text'],
+            ['Postalcode', 'Enter postal code', $customer->postalCode, 'text'],
+            ['City', 'Enter city', $customer->city, 'text'],
+            ['Mail', 'Enter mail', $customer->email, 'email'],
+            ['Website', 'Enter url', $customer->url, 'url']
         ];
         return view('customer.edit', [
             'customer'=>$customer,
