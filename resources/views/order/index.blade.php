@@ -12,7 +12,7 @@
 @php
     $heads = [
         __('Reference'),
-        __('Date'),
+        ['label' => __('Date')],
         __('Customer'),
         'Total',
         ['label' => 'Actions', 'width' => 15]
@@ -38,10 +38,8 @@
                                 <td><a href="{{route('customer.show', $order['customer_id'])}}">{{$order['customer']->name}}</a></td>
                                 <td>{{number_format($order['amountET'] + $order['amountVTA'], 2, ',', ' ')}}€</td>
                                 <td><nobr>
-                                        <!-- SHOW -->
-                                        <a class="btn btn-xs btn-default text-teal mx-1 shadow" href="{{route('order.show', $order['id'])}}">
-                                            <i class="fa fa-lg fa-fw fa-eye"></i>
-                                        </a>
+
+                                        <x-button.show route="order.show">{{$order->id}}</x-button.show>
 
                                         <a class="btn btn-xs btn-default text-primary mx-1 shadow" href="#">
                                             <i class="fa fa-lg fa-fw fa-pen"></i>

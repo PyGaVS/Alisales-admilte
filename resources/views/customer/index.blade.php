@@ -18,8 +18,8 @@
 @php
     $heads = [
         __('Name'),
-        ['label' => __('Address')],
-        ['label' => __('Postal code'), 'width' => 11],
+        ['label' => __('Address'), 'width' => 35],
+        //['label' => __('Postal code'), 'width' => 11],
         ['label' => __('Website')],
         ['label' => 'Actions', 'width' => 12]
     ];
@@ -39,24 +39,12 @@
                             @foreach($customers as $customer)
                             <tr>
                                 <td>{{$customer['name']}}</td>
-                                <td>{{$customer['address']}}</td>
-                                <td>{{$customer['postalCode']}}</td>
+                                <td style="position: relative;"><x-address>{{$customer['address']}}</x-address></td>
                                 <td>{{$customer['url']}}</td>
                                 <td><nobr>
-                                        <!-- EDIT -->
-                                        <a class="btn btn-xs btn-default text-primary mx-1 shadow" href="{{route('customer.edit', $customer['id'])}}">
-                                            <i class="fa fa-lg fa-fw fa-pen"></i>
-                                        </a>
-
-                                        <!-- DELETE -->
-                                        <a class="btn btn-xs btn-default text-danger mx-1 shadow" href="{{route('customer.destroy', $customer['id'])}}">
-                                            <i class="fa fa-lg fa-fw fa-trash"></i>
-                                        </a>
-
-                                        <!-- SHOW -->
-                                        <a class="btn btn-xs btn-default text-teal mx-1 shadow" href="{{route('customer.show', $customer['id'])}}">
-                                            <i class="fa fa-lg fa-fw fa-eye"></i>
-                                        </a>
+                                        <x-button.edit route="customer.edit">{{$customer->id}}</x-button.edit>
+                                        <x-button.delete route="customer.destroy">{{$customer->id}}</x-button.delete>
+                                        <x-button.show route="customer.show">{{$customer->id}}</x-button.show>
                                     </nobr>
                                 </td>
                             </tr>

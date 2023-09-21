@@ -31,10 +31,7 @@
                             <tr>
                                 <td style="border: none;">{{$category['name']}}</td>
                                 <td style="border: none;"><nobr>
-                                        <!-- SHOW -->
-                                        <a class="btn btn-xs btn-default text-teal mx-1 shadow" href="{{route('category.show', $category['id'])}}">
-                                            <i class="fa fa-lg fa-fw fa-eye"></i>
-                                        </a>
+                                        <x-button.show route="category.show">{{$category->id}}</x-button.show>
                                     </nobr>
                                 </td>
                             </tr>

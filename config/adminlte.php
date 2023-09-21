@@ -386,7 +386,7 @@ return [
         [
             'text'      => 'Home',
             'icon'      => 'fas fa-home fa-lg',
-            'icon_color'=> 'yellow',
+            'icon_color'=> 'green',
             'url'       => '/home'
         ],
         [
@@ -398,13 +398,13 @@ return [
         [
             'text'      => 'Categories',
             'icon'      => 'fas fa-list fa-lg',
-            'icon_color'=> 'yellow',
+            'icon_color'=> 'orange',
             'url'       => '/category'
         ],
         [
             'text'      => 'Orders',
             'icon'      => 'fas fa-store fa-lg',
-            'icon_color'=> 'yellow',
+            'icon_color'=> 'red',
             'url'       => '/order'
         ]
     ],
